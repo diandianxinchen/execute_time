@@ -33,6 +33,7 @@ public class TimeThreadLocalHolder {
 
     public static void clear() {
         ExecuteTime executeTime = timeModelThreadLocal.get();
+        executeTime.setIoTime(0);
         executeTime.getIoList().clear();
     }
 }
